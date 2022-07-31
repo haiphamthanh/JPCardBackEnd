@@ -1,8 +1,8 @@
 package config
 
 import (
-	"flag",
-	"fmt",
+	"flag"
+	"fmt"
 	"os"
 )
 
