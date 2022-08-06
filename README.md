@@ -14,3 +14,8 @@ go get -u github.com/julienschmidt/httprouter
 
 # To download all modules in `mod` file (mod file like pod.lock in cocoapod)
 go mod download
+
+# Guideline (3 parts)
+# https://hackernoon.com/how-to-create-golang-rest-api-project-layout-configuration-part-1-am733yi7?ref=hackernoon.com
+# https://hackernoon.com/how-to-create-golang-rest-api-project-layout-configuration-part-2-wh2z3y5z
+# https://hackernoon.com/how-to-create-golang-rest-api-project-layout-configuration-part-3-pr453ylt
