@@ -24,6 +24,18 @@ go mod download
 
 brew install golang-migrate
 
+# remove all containers
+
+docker container rm -f $(docker container ps -a -q)
+
+# clear volumes
+
+docker volume prune -f
+
+# start app
+
+docker-compose up --build
+
 # Guideline (3 parts)
 
 # https://hackernoon.com/how-to-create-golang-rest-api-project-layout-configuration-part-1-am733yi7?ref=hackernoon.com
