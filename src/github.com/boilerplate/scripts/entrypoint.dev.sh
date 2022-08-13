@@ -1,8 +1,10 @@
 #!/bin/bash
 set -e
 
+echo "#################### migrating dev db"
 go run cmd/dbmigrate/main.go
 
+echo "#################### migrating test db"
 go run cmd/dbmigrate/main.go -dbname=boilerplatetest
 
 echo "#################### downloading CompileDaemon"
