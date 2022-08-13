@@ -5,6 +5,8 @@ import (
 
 	"github.com/boilerplate/pkg/config"
 	"github.com/golang-migrate/migrate/v4"
+	_ "github.com/golang-migrate/migrate/v4/database/postgres"
+	_ "github.com/golang-migrate/migrate/v4/source/file"
 	"github.com/joho/godotenv"
 )
 
@@ -13,7 +15,6 @@ func main() {
 	cfg := config.Get()
 
 	direction := cfg.GetMigration()
-
 	if direction != "down" && direction != "up" {
 		log.Println("-migrate accepts [up, down] values only")
 		return
