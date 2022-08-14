@@ -23,7 +23,7 @@ func (s *Server) WithAddr(addr string) *Server {
 	return s
 }
 
-func (s *Server) WithErrorLogger(l *log.Logger) *Server {
+func (s *Server) WithErrLogger(l *log.Logger) *Server {
 	s.srv.ErrorLog = l
 	return s
 }

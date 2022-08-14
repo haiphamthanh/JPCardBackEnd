@@ -10,6 +10,6 @@ import (
 
 func Do(app *application.Application) httprouter.Handle {
 	return func(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
-		fmt.Fprint(w, "hello")
+		fmt.Fprintf(w, "hello")
 	}
 }
