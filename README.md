@@ -43,3 +43,8 @@ docker-compose up --build
 # https://hackernoon.com/how-to-create-golang-rest-api-project-layout-configuration-part-2-wh2z3y5z
 
 # https://hackernoon.com/how-to-create-golang-rest-api-project-layout-configuration-part-3-pr453ylt
+
+# Resolve permission error: https://stackoverflow.com/questions/66229898/docker-entrypoint-initdb-permission-denied
+
+chmod -R 777 db/migrations
+chmod -R 777 db/scripts
