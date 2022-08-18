@@ -15,4 +15,4 @@ RUN go mod download
 COPY . .
 
 # This container exposes port 7777 to the outside world
-EXPOSE 7777
+EXPOSE ${API_PORT}
