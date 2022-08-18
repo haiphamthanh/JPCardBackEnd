@@ -10,6 +10,7 @@ import (
 func Get(app *application.Application) *httprouter.Router {
 	mux := httprouter.New()
 	mux.GET("/users/:id", getuser.Do(app))
+	mux.GET("/users", getuser.DoAll(app))
 	mux.POST("/users", createuser.Do(app))
 	return mux
 }

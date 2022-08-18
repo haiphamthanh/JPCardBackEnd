@@ -55,3 +55,23 @@ func (u *User) GetByID(ctx context.Context, app *application.Application) error 
 
 	return nil
 }
+
+// https://go.dev/doc/database/querying
+func GetAllUser(ctx context.Context, app *application.Application) ([]User, error) {
+	rows, err := app.DB.Client.Query("select * from users")
+
+	if err != nil {
+		return nil, err
+	}
+
+	users := []User{}
+	for rows.Next() {
+		var user User
+		if err := rows.Scan(&user.ID, &user.UserName); err != nil {
+			return users, err
+		}
+		users = append(users, user)
+	}
+
+	return users, nil
+}
