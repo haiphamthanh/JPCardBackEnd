@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/boilerplate/cmd/api/handlers/models"
+	"github.com/boilerplate/cmd/api/models"
 	"github.com/boilerplate/pkg/application"
 	"github.com/boilerplate/pkg/middleware"
 	"github.com/julienschmidt/httprouter"
@@ -24,7 +24,6 @@ func Do(app *application.Application) httprouter.Handle {
 
 func getUser(app *application.Application) httprouter.Handle {
 	return func(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
-		// fmt.Fprintf(w, "hello")
 		defer r.Body.Close()
 
 		id := r.Context().Value(models.CtxKey("userid"))

@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/boilerplate/cmd/api/handlers/models"
+	"github.com/boilerplate/cmd/api/models"
 	"github.com/julienschmidt/httprouter"
 )
 
