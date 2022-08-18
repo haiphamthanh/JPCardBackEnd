@@ -25,6 +25,10 @@ func main() {
 		WithRouter(router.Get(app)).
 		WithErrLogger(logger.Error)
 
+	/**
+	A goroutine is a lightweight thread of execution.
+	https://gobyexample.com/goroutines
+	*/
 	go func() {
 		logger.Info.Printf("starting server at %s", app.Cfg.GetAPIPort())
 		if err := srv.Start(); err != nil {
